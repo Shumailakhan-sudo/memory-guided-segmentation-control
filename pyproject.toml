@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory-guided-vos"
+version = "0.1.0.dev0"
+description = "Reproducibility toolkit for memory-guided SAM-2 video object segmentation with confidence gating (DAVIS)."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pillow>=10", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+gpu = ["torch>=2.1", "torchvision>=0.16", "opencv-python>=4.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
