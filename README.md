@@ -24,7 +24,6 @@ scripts/                 Evaluation and analysis scripts
 configs/                 Experiment configurations
 tests/                   Automated tests
 docs/                    Reproducibility documentation
-manuscript/              Manuscript-related materials
 ```
 
 ## Installation
@@ -56,14 +55,6 @@ python -m pytest
 # Run smoke tests
 python scripts/smoke_test.py
 
-# Check manuscript consistency
-python scripts/check_manuscript_consistency.py
-
-# Reproduce result tables
-python scripts/reproduce_tables.py
-
-# Generate figures
-python scripts/generate_figures.py
 
 # Run segmentation evaluation
 python scripts/run_segmentation.py --profile
